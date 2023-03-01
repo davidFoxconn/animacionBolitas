@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #1b1b1b;
+}
+body .container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+body .container .bolitas {
+  position: relative;
+  display: flex;
+}
+body .container .bolitas span {
+  position: relative;
+  min-width: 30px;
+  height: 30px;
+  background: #fff;
+  box-shadow: 0 0 0 10px rgba(79, 195, 220, 0.2666666667), 0 0 50px #705afe, 0 0 100px rgba(79, 195, 220, 0.2666666667);
+  margin: 0 15px;
+  border-radius: 50%;
+  -webkit-animation: animate 15s linear infinite;
+          animation: animate 15s linear infinite;
+  -webkit-animation-duration: calc(75s / var(--i));
+          animation-duration: calc(75s / var(--i));
+}
+body .container .bolitas span:nth-child(even) {
+  background: #ffc107;
+  box-shadow: 0 0 0 10px #f0db4f, 0 0 50px #ff2d75, 0 0 100px #f23b00;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}/*# sourceMappingURL=style.css.map */
